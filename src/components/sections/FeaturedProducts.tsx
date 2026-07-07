@@ -155,12 +155,12 @@ export default function FeaturedProducts() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-6 md:p-8 text-left">
                     <div className="space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                       {/* Category */}
-                      <span className="text-[9px] font-mono font-bold tracking-[0.2em] text-accent uppercase block">
+                      <span className="text-[9px] font-mono font-medium tracking-[0.2em] text-accent uppercase block">
                         {product.category}
                       </span>
                       
                       {/* Name */}
-                      <h3 className="font-space font-bold text-lg md:text-xl text-white tracking-tight leading-tight">
+                      <h3 className="font-space font-medium text-lg md:text-xl text-white tracking-tight leading-tight">
                         {product.name}
                       </h3>
 
@@ -180,13 +180,13 @@ export default function FeaturedProducts() {
                           {product.compliance.slice(0, 2).map((comp) => (
                             <span 
                               key={comp}
-                              className="px-1.5 py-0.5 rounded-[1px] bg-white/10 text-[8px] font-mono font-bold text-white/80 uppercase tracking-wider"
+                              className="px-1.5 py-0.5 rounded-[1px] bg-white/10 text-[8px] font-mono font-medium text-white/80 uppercase tracking-wider"
                             >
                               {comp}
                             </span>
                           ))}
                         </div>
-                        <span className="text-white text-xs font-mono font-bold uppercase tracking-widest flex items-center gap-1">
+                        <span className="text-white text-xs font-mono font-medium uppercase tracking-widest flex items-center gap-1">
                           View &rarr;
                         </span>
                       </div>

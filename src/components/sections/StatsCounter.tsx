@@ -5,10 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const statsData = [
-  { id: 'stat-years', value: 15, suffix: '+', label: 'Years of Precision Fabrication' },
-  { id: 'stat-machines', value: 200, suffix: '+', label: 'Industrial Installations' },
-  { id: 'stat-clients', value: 50, suffix: '+', label: 'Active Pharma & Biotech Clients' },
-  { id: 'stat-compliance', value: 100, suffix: '%', label: 'cGMP & FDA Regulatory Compliance' },
+  { id: 'stat-years', value: 15, suffix: '+', label: 'Years of Excellence' },
+  { id: 'stat-machines', value: 200, suffix: '+', label: 'Machines Installed' },
+  { id: 'stat-clients', value: 50, suffix: '+', label: 'Pharma Partnerships' },
+  { id: 'stat-compliance', value: 100, suffix: '%', label: 'Regulatory Compliance' },
 ];
 
 export default function StatsCounter() {

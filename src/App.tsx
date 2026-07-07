@@ -4,7 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
 import PageTransition from './components/ui/PageTransition';
 import CustomCursor from './components/ui/CustomCursor';
-import ScrollProgressBar from './components/ui/ScrollProgressBar';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 
@@ -35,9 +34,6 @@ export default function App() {
           <div className="relative min-h-screen flex flex-col bg-bg text-text selection:bg-accent selection:text-white overflow-x-hidden">
             {/* Custom interactive cursor */}
             <CustomCursor />
-
-            {/* Subtle horizontal scroll progress indicator */}
-            <ScrollProgressBar />
 
             {/* Main content wrapper which scrolls over the sticky footer */}
             <div className="relative z-10 bg-bg shadow-[0_15px_40px_rgba(0,0,0,0.15)] flex-grow flex flex-col min-h-screen">
