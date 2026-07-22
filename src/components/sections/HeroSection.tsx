@@ -43,19 +43,20 @@ export default function HeroSection() {
       ref={containerRef}
       className="relative w-full h-screen overflow-hidden bg-black flex items-center justify-center px-6 md:px-12"
     >
-        {/* Background Looping YouTube Video of Outpatient Pharmacy Automation System */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] min-w-full h-full min-h-[56.25vw] opacity-30 scale-102">
+        {/* Clean, Fully Shielded Background YouTube Video (Zero controls, zero pause buttons, physically cropped & pointer-shielded) */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0 overflow-hidden select-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220vw] h-[220vh] min-w-[177.78vh] min-h-[56.25vw] opacity-35 pointer-events-none select-none">
             <iframe
-              src="https://www.youtube.com/embed/-6iUTGZTkm8?autoplay=1&mute=1&controls=0&loop=1&playlist=-6iUTGZTkm8&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&enablejsapi=1"
-              title="Outpatient Pharmacy Automation System (OPAS) at KKH"
-              className="w-full h-full grayscale contrast-[1.05] pointer-events-none select-none border-0"
+              src="https://www.youtube-nocookie.com/embed/-6iUTGZTkm8?autoplay=1&mute=1&controls=0&loop=1&playlist=-6iUTGZTkm8&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&enablejsapi=1&disablekb=1&fs=0"
+              title="Pharmaceutical Automation Background Video"
+              className="w-full h-full grayscale contrast-[1.1] pointer-events-none select-none border-0"
               allow="autoplay; encrypted-media"
+              tabIndex={-1}
             />
           </div>
           {/* Multi-layered subtle gradient overlay for readability & high-contrast minimalism */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/45 to-black/95" />
-          <div className="absolute inset-0 bg-radial-gradient-to-c from-transparent via-transparent to-black/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/45 to-black/95 pointer-events-none" />
+          <div className="absolute inset-0 bg-radial-gradient-to-c from-transparent via-transparent to-black/95 pointer-events-none" />
         </div>
 
         {/* Centered Typography Content Container */}
