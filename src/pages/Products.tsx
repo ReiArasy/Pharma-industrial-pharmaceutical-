@@ -85,7 +85,7 @@ export default function Products() {
     setVisibleCount(6); // Reset visible count on category change
   };
 
-  const seoTitle = "Machinery Catalog | PT. Pharma-Industrial Manufaktur Nusantara";
+  const seoTitle = "Machinery Catalog | pharma-industrial";
   const seoDescription = "Explore our certified cGMP, FDA, and ISO compliant pharmaceutical machinery catalog. Engineered for precision, including high-shear mixers, tablet presses, fluid bed dryers, and sterile filling systems.";
   const siteUrl = `${window.location.origin}/products`;
 
@@ -102,7 +102,7 @@ export default function Products() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80" />
-        <meta property="og:site_name" content="Pharma-Industrial" />
+        <meta property="og:site_name" content="Pharma" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -168,17 +168,15 @@ export default function Products() {
           </div>
         </div>
 
-        {/* Product Grid (Pinterest Style Masonry with Hover Overlay) */}
+        {/* Product Gallery Grid */}
         <div className="min-h-[400px]">
           <motion.div 
             layout
-            className="columns-1 sm:columns-2 md:columns-3 gap-8 space-y-8 w-full"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full"
           >
             <AnimatePresence mode="popLayout">
               {isLoading ? (
                 [...Array(6)].map((_, index) => {
-                  const aspects = ['aspect-[3/4]', 'aspect-[4/5]', 'aspect-[1/1]', 'aspect-[4/3]', 'aspect-[3/2]', 'aspect-[14/16]'];
-                  const aspectClass = aspects[index % aspects.length];
                   return (
                     <motion.div
                       layout
@@ -187,44 +185,24 @@ export default function Products() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -15 }}
                       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
-                      className="break-inside-avoid w-full inline-block group mb-8 animate-pulse"
+                      className="w-full group animate-pulse"
                     >
-                      <div className="relative block w-full overflow-hidden border border-border/20 rounded-sm bg-bg-dark/30 p-6 space-y-4">
+                      <div className="relative block w-full overflow-hidden border border-border/20 rounded-sm bg-bg-dark/30 p-4 space-y-4">
                         {/* Shimmer Image Box */}
-                        <div className={`w-full ${aspectClass} bg-neutral-900/60 rounded-[1px] relative overflow-hidden`} />
+                        <div className="w-full aspect-[4/3] bg-neutral-900/60 rounded-[1px] relative overflow-hidden" />
                         
                         {/* Text Placeholders */}
                         <div className="space-y-3 pt-2">
-                          {/* Category */}
                           <div className="h-2.5 bg-neutral-900 rounded-[1px] w-1/4" />
-                          {/* Title */}
                           <div className="h-4 bg-neutral-900 rounded-[1px] w-3/4" />
-                          {/* Capacity */}
                           <div className="h-2.5 bg-neutral-950 rounded-[1px] w-1/3" />
-                          {/* Description */}
-                          <div className="space-y-1.5 pt-1">
-                            <div className="h-2 bg-neutral-950 rounded-[1px] w-full" />
-                            <div className="h-2 bg-neutral-950 rounded-[1px] w-5/6" />
-                          </div>
-                        </div>
-
-                        {/* Bottom Metadata Plate */}
-                        <div className="pt-4 border-t border-border/10 flex justify-between items-center">
-                          <div className="flex gap-1.5">
-                            <div className="h-4 w-8 bg-neutral-900 rounded-[1px]" />
-                            <div className="h-4 w-10 bg-neutral-900 rounded-[1px]" />
-                          </div>
-                          <div className="h-3 w-8 bg-neutral-900 rounded-[1px]" />
                         </div>
                       </div>
                     </motion.div>
                   );
                 })
               ) : (
-                displayedProducts.map((product, index) => {
-                  const aspects = ['aspect-[3/4]', 'aspect-[4/5]', 'aspect-[1/1]', 'aspect-[4/3]', 'aspect-[3/2]', 'aspect-[14/16]'];
-                  const aspectClass = aspects[index % aspects.length];
-
+                displayedProducts.map((product) => {
                   return (
                     <motion.div
                       layout
@@ -233,62 +211,37 @@ export default function Products() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 15 }}
                       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                      className="break-inside-avoid w-full inline-block group"
+                      className="w-full group"
                     >
                       <Link
                         to={`/products/${product.slug}`}
-                        className="relative block w-full overflow-hidden border border-border/40 rounded-sm bg-bg-dark transition-all duration-500 ease-out hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(0,0,0,0.65)] hover:border-accent/40"
+                        className="relative block w-full overflow-hidden border border-border/30 rounded-sm bg-neutral-900 transition-all duration-500 ease-out hover:border-white/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
                       >
-                        {/* Image container with custom aspect */}
-                        <div className={`w-full ${aspectClass} overflow-hidden relative`}>
+                        {/* Minimalist Gallery Image Container */}
+                        <div className="w-full aspect-[4/3] overflow-hidden relative">
                           <img
                             src={product.cover || fallbackImage}
                             alt={product.name}
                             referrerPolicy="no-referrer"
-                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700 ease-out"
                             onError={(e) => {
                               (e.target as HTMLImageElement).src = fallbackImage;
                             }}
                           />
-                        </div>
 
-                        {/* Overlapping Hover Info Panel */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end p-6 md:p-8 text-left">
-                          <div className="space-y-3 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                            {/* Category */}
-                            <span className="text-[9px] font-mono font-medium tracking-[0.2em] text-accent uppercase block">
-                              {product.category}
-                            </span>
-                            
-                            {/* Name */}
-                            <h3 className="font-space font-medium text-lg md:text-xl text-white tracking-tight leading-tight">
+                          {/* Subtle Bottom Gradient for Contrast & Balance */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+
+                          {/* Minimalist Overlay: Product Name in White & View Detail on Hover */}
+                          <div className="absolute inset-0 p-6 flex flex-col justify-end text-left z-10">
+                            <h3 className="font-space font-medium text-lg md:text-xl text-white tracking-tight leading-snug">
                               {product.name}
                             </h3>
 
-                            {/* Capacity */}
-                            <span className="block font-sans text-[11px] text-white/70 uppercase tracking-widest">
-                              Cap: {product.capacity}
-                            </span>
-
-                            {/* Description */}
-                            <p className="font-sans text-xs text-white/50 leading-relaxed line-clamp-2">
-                              {product.description}
-                            </p>
-
-                            {/* Specs metadata strip & action */}
-                            <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                              <div className="flex gap-1">
-                                {product.compliance.slice(0, 2).map((comp) => (
-                                  <span 
-                                    key={comp}
-                                    className="px-1.5 py-0.5 rounded-[1px] bg-white/10 text-[8px] font-mono font-medium text-white/80 uppercase tracking-wider"
-                                  >
-                                    {comp}
-                                  </span>
-                                ))}
-                              </div>
-                              <span className="text-white text-xs font-mono font-medium uppercase tracking-widest flex items-center gap-1">
-                                View &rarr;
+                            {/* View Detail on Hover */}
+                            <div className="overflow-hidden max-h-0 group-hover:max-h-8 transition-all duration-300 ease-out mt-0 group-hover:mt-2">
+                              <span className="font-mono text-xs font-medium uppercase tracking-widest text-accent flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                                View Detail &rarr;
                               </span>
                             </div>
                           </div>

@@ -46,7 +46,7 @@ const steps = [
   }
 ];
 
-const revealText = "Every custom tablet press, fluid bed dryer, and cleanroom system is fabricated under absolute sterile compliance protocols. Our engineering campus delivers uncompromising aseptic integrity, enabling absolute cGMP and FDA validation compliance for high-output biopharmaceutical manufacturers across Bekasi, Bekasi Nusantara, and Southeast Asia.";
+const revealText = "Every custom tablet press, fluid bed dryer, and cleanroom system is fabricated under absolute sterile compliance protocols. Our engineering campus delivers uncompromising aseptic integrity, enabling absolute cGMP and FDA validation compliance for high-output biopharmaceutical manufacturers across Indonesia and Southeast Asia.";
 
 export default function Contact() {
   useEffect(() => {
@@ -167,7 +167,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formattedMessage = `Hello Pharma-Industrial Engineering,
+    const formattedMessage = `Hello Pharma Engineering,
 
 I would like to submit a formal Request for Quotation (RFQ) with the following details:
 
@@ -193,7 +193,7 @@ Thank you.`;
     }, 800);
   };
 
-  const seoTitle = "Contact & RFQ | PT. Pharma-Industrial Manufaktur Nusantara";
+  const seoTitle = "Contact & RFQ | pharma-industrial";
   const seoDescription = "Initiate your plant architecture audit. Request a formal quotation (RFQ) or submit your custom specifications directly to our West Java factory and lead design engineers.";
   const siteUrl = `${window.location.origin}/contact`;
 
@@ -210,7 +210,7 @@ Thank you.`;
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80" />
-        <meta property="og:site_name" content="Pharma-Industrial" />
+        <meta property="og:site_name" content="Pharma" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -451,7 +451,7 @@ Thank you.`;
             {/* Info block */}
             <div className="space-y-6">
               <div className="space-y-1">
-                <h2 className="font-space text-2xl font-light text-text tracking-tight">Pharma-Industrial Manufacturing</h2>
+                <h2 className="font-space text-2xl font-light text-text tracking-tight">Pharma Manufacturing</h2>
                 <p className="font-sans text-xs text-accent uppercase tracking-wider font-medium">Headquarters & Fabrication Campus</p>
               </div>
 
@@ -468,8 +468,8 @@ Thank you.`;
                 <div className="flex items-start gap-4">
                   <Mail size={18} className="text-accent shrink-0 mt-0.5" />
                   <p>
-                    <a href="mailto:info@pharma-industrial.co.id" className="text-text hover:text-accent transition-colors font-mono">
-                      info@pharma-industrial.co.id
+                    <a href="mailto:info@pharma.co.id" className="text-text hover:text-accent transition-colors font-mono">
+                      info@pharma.co.id
                     </a>
                   </p>
                 </div>
@@ -489,7 +489,7 @@ Thank you.`;
             {/* Google Maps Embed - borderless, 300px */}
             <div className="border border-border p-1 bg-bg-alt rounded-[2px]">
               <iframe
-                title="Pharma Industrial Factory Location Map"
+                title="Pharma Factory Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15860.579483321588!2d107.16104273873995!3d-6.257143974558509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6984d7be15e1df%3A0xf6b579122fb20f4b!2sKawasan%20Industri%20Jababeka%20III!5e0!3m2!1sid!2sid!4v1719811568212!5m2!1sid!2sid"
                 width="100%"
                 height="300"

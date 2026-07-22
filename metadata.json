@@ -1,5 +1,5 @@
 {
-  "name": "PT. Pharma-Industrial Manufaktur Nusantara",
+  "name": "pharma-industrial",
   "description": "High-precision pharmaceutical machinery manufacturer certified to sanitary standards, engineered for the highest technical standards and operational reliability.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

@@ -6,7 +6,7 @@ import StatsCounter from '../components/sections/StatsCounter';
 import CTAStrip from '../components/sections/CTAStrip';
 
 export default function Home() {
-  const seoTitle = "PT. Pharma-Industrial Manufaktur Nusantara | Sterile Machinery Fabrication";
+  const seoTitle = "pharma-industrial | Sterile Machinery Fabrication";
   const seoDescription = "Pioneering high-performance pharmaceutical machinery fabrication. We engineer precision tablet presses, fluid bed dryers, and sterilizers complying with global cGMP, FDA, and ISO standards.";
   const siteUrl = window.location.origin;
 
@@ -23,7 +23,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630&q=80" />
-        <meta property="og:site_name" content="Pharma-Industrial" />
+        <meta property="og:site_name" content="pharma-industrial" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />

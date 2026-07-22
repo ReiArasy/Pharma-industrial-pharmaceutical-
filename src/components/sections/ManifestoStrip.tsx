@@ -21,7 +21,7 @@ export default function ManifestoStrip() {
             Engineered to the <br />Highest Sanitary Standards.
           </h2>
           <p className="font-sans text-sm md:text-base text-white/60 leading-relaxed max-w-lg line-clamp-1 font-light">
-            Pharma-Industrial designs and manufactures high-performance pharmaceutical machinery certified to strict regulatory guidelines.
+            Pharma designs and manufactures high-performance pharmaceutical machinery certified to strict regulatory guidelines.
           </p>
           <div className="pt-2">
             <Link

@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="space-y-3">
           <div className="flex items-center gap-3">
             <Link to="/" className="font-space font-semibold text-xs tracking-[0.25em] text-white hover:text-accent transition-colors">
-              PHARMA-INDUSTRIAL
+              PHARMA
             </Link>
             <span className="h-3 w-[1px] bg-white/20" />
             <span className="font-mono text-[9px] text-accent uppercase tracking-widest">
@@ -44,7 +44,7 @@ export default function Footer() {
             </span>
             <span className="flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5 text-accent" />
-              info@pharma-industrial.co.id
+              info@pharma.co.id
             </span>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Footer() {
       {/* Underbar Copyright */}
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 font-sans text-[10px] text-white/30">
         <p>
-          &copy; {currentYear} PT. Pharma-Industrial Nusantara. All rights reserved.
+          &copy; {currentYear} pharma-industrial. All rights reserved.
         </p>
         <p className="font-mono uppercase tracking-widest text-white/15">
           Precision Engineering Solutions

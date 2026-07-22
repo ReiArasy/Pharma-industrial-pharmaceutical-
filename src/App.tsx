@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
 import SmoothScrollProvider from './components/layout/SmoothScrollProvider';
 import PageTransition from './components/ui/PageTransition';
 import CustomCursor from './components/ui/CustomCursor';
@@ -28,6 +28,14 @@ function ScrollToTop() {
 export default function App() {
   return (
     <HelmetProvider>
+      <Helmet 
+        defaultTitle="pharma-industrial | Certified Pharmaceutical Machinery" 
+        titleTemplate="%s | pharma-industrial"
+      >
+        <html lang="en" />
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta property="og:site_name" content="pharma-industrial" />
+      </Helmet>
       <Router>
         <ScrollToTop />
         <SmoothScrollProvider>

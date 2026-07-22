@@ -97,7 +97,7 @@ export default function Navbar() {
               textIsLight ? 'text-white' : 'text-text'
             }`}
           >
-            PHARMA-INDUSTRIAL
+            PHARMA
           </Link>
 
           {/* Center: Desktop Links */}
@@ -195,7 +195,7 @@ export default function Navbar() {
               {/* Top Bar inside Overlay */}
               <div className="flex items-center justify-between z-10">
                 <span className="font-space font-medium text-sm tracking-[0.2em] text-white">
-                  PHARMA-INDUSTRIAL
+                  PHARMA
                 </span>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
@@ -266,8 +266,8 @@ export default function Navbar() {
 
               {/* Bottom Info inside Overlay */}
               <div className="text-xs font-mono text-white/50 space-y-1 z-10 text-left">
-                <p>PT. Pharma-Industrial Manufaktur Nusantara</p>
-                <p>info@pharma-industrial.co.id</p>
+                <p>pharma-industrial</p>
+                <p>info@pharma.co.id</p>
               </div>
             </motion.div>
           </>

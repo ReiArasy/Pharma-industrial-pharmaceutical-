@@ -167,9 +167,12 @@ export default function About() {
     return () => ctx.revert();
   }, []);
 
-  // Text for Hero reveal
-  const heroText = "We design systems that protect the standards of human life.";
-  const words = heroText.split(" ");
+  // Hero lines for high-end architectural mask-clip reveal
+  const heroLines = [
+    "We design systems",
+    "that protect the standards",
+    "of human life."
+  ];
 
   const services = [
     { num: '01', name: 'Field Installation & Sterile-Grade Orbital Piping' },
@@ -185,7 +188,7 @@ export default function About() {
     { name: 'Automation & Panel CNC', desc: 'PLC logic programming, wiring bay, and electrical safety validation testing.', image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=600&h=400&q=80' },
   ];
 
-  const seoTitle = "About PT. Pharma-Industrial Manufaktur Nusantara | Engineering Excellence";
+  const seoTitle = "About pharma-industrial | Engineering Excellence";
   const seoDescription = "Learn about our engineering philosophy, strict cGMP validation standards, professional team of mechanical designers, and state-of-the-art Cikarang fabrication facility.";
   const siteUrl = `${window.location.origin}/about`;
 
@@ -202,7 +205,7 @@ export default function About() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1200&h=630&q=80" />
-        <meta property="og:site_name" content="Pharma-Industrial" />
+        <meta property="og:site_name" content="Pharma" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -211,57 +214,44 @@ export default function About() {
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=1200&h=630&q=80" />
       </Helmet>
       
-      {/* Section 1 — Hero Text (Typography pure) */}
+      {/* Section 1: Hero Text (Pure Typography & Masked Line Reveal) */}
       <section className="relative h-screen w-full bg-bg-dark flex items-center justify-center px-6 md:px-12 text-center overflow-hidden">
-        {/* Precision Industrial Animation Mask Entry */}
-        <div className="absolute inset-0 flex flex-col pointer-events-none z-20">
-          <motion.div
-            initial={{ scaleY: 1 }}
-            animate={{ scaleY: 0 }}
-            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
-            style={{ originY: 0 }}
-            className="w-full h-1/2 bg-neutral-950 border-b border-border/10"
-          />
-          <motion.div
-            initial={{ scaleY: 1 }}
-            animate={{ scaleY: 0 }}
-            transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
-            style={{ originY: 1 }}
-            className="w-full h-1/2 bg-neutral-950 border-t border-border/10"
-          />
-        </div>
-
-        <div className="max-w-4xl space-y-6 z-10">
-          <span className="font-mono text-[11px] font-medium text-accent tracking-[0.25em] block uppercase animate-pulse">
-            Our Engineering Philosophy
-          </span>
-          <h1 className="font-space text-4xl md:text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.1] max-w-3xl mx-auto flex flex-wrap items-center justify-center gap-x-4 gap-y-2 line-clamp-2">
-            {words.map((word, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="inline-block"
-              >
-                {word}
-              </motion.span>
+        <div className="max-w-5xl space-y-8 z-10">
+          {/* Headline Text with Responsive Masked Lines */}
+          <h1 className="font-space text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.12] max-w-4xl mx-auto space-y-1">
+            {heroLines.map((line, index) => (
+              <div key={index} className="overflow-hidden py-1 block">
+                <motion.span
+                  initial={{ y: "115%" }}
+                  animate={{ y: "0%" }}
+                  transition={{
+                    duration: 1.05,
+                    delay: 0.7 + index * 0.12,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="block text-white"
+                >
+                  {line}
+                </motion.span>
+              </div>
             ))}
           </h1>
+
+          {/* Architectural Hairline Divider */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            transition={{ delay: 1.2, duration: 1 }}
-            className="w-12 h-[1px] bg-white mx-auto mt-8"
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 0.6 }}
+            transition={{
+              duration: 0.9,
+              delay: 1.15,
+              ease: [0.16, 1, 0.3, 1],
+            }}
+            className="w-16 md:w-24 h-[1px] bg-accent mx-auto mt-8 origin-center"
           />
         </div>
       </section>
 
-      {/* Section 2 — Company Story */}
+      {/* Section 2: Company Story */}
       <section className="story-section-trigger py-24 md:py-36 px-6 md:px-12 border-b border-border">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           
@@ -285,14 +275,14 @@ export default function About() {
 
           <div className="space-y-6 text-left">
             <span className="story-reveal font-mono text-[10px] font-medium text-accent tracking-widest uppercase block">
-              PHARMA-INDUSTRIAL MANUFACTURING
+              PHARMA MANUFACTURING
             </span>
             <h2 className="story-reveal font-space text-3xl md:text-5xl font-light tracking-tight text-text leading-tight line-clamp-2">
               Bespoke Craftsmanship with Global Execution Standards.
             </h2>
             <div className="story-reveal h-[2px] w-12 bg-accent" />
             <p className="story-reveal font-sans text-sm md:text-base text-text-muted leading-relaxed line-clamp-2">
-              Founded in 2011, Pharma-Industrial offers cleanroom-certified machinery that meets strict regulatory standards as a premium European alternative.
+              Founded in 2011, Pharma offers cleanroom-certified machinery that meets strict regulatory standards as a premium European alternative.
             </p>
             <p className="story-reveal font-sans text-sm md:text-base text-text-muted leading-relaxed line-clamp-2">
               We combine advanced mechanical design with global execution, offering certified tablet press and aseptic filling machinery lines.
@@ -302,7 +292,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 3 — Company Values (3 pillars) */}
+      {/* Section 3: Company Values (3 pillars) */}
       <section className="values-section-trigger py-24 md:py-36 px-6 md:px-12 bg-bg-alt border-b border-border">
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-left space-y-3">
@@ -347,7 +337,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 4 — Production Facilities */}
+      {/* Section 4: Production Facilities */}
       <section className="facilities-section-trigger py-24 md:py-36 px-6 md:px-12 border-b border-border">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="space-y-3 max-w-xl text-left">
@@ -392,7 +382,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Section 6 — Services */}
+      {/* Section 6: Services */}
       <section className="services-section-trigger py-24 md:py-36 px-6 md:px-12 border-b border-border">
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="space-y-3 text-left">

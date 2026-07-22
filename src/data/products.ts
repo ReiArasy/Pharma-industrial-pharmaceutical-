@@ -7,10 +7,10 @@ export const products: Product[] = [
     category: "Tablet Compression",
     capacity: "500,000 tablets/hour",
     compliance: ["cGMP", "GMP", "ISO 9001", "FDA Compliant"],
-    cover: "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80",
     images: [
-      "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1607619056574-7b8d304f3c6f?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
       { label: "Maximum Capacity", value: "500,000 tablets/hour" },
@@ -33,10 +33,10 @@ export const products: Product[] = [
     category: "Mixing & Granulation",
     capacity: "200 kg/batch",
     compliance: ["cGMP", "GMP", "ATEX Ex-Proof"],
-    cover: "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=1200&q=80",
     images: [
-      "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522083165195-342750297f05?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
       { label: "Operating Capacity", value: "80 - 200 kg per batch" },
@@ -57,8 +57,9 @@ export const products: Product[] = [
     category: "Mixing & Granulation",
     capacity: "150 Liters/batch",
     compliance: ["cGMP", "GMP", "ISO 14001"],
-    cover: "https://images.unsplash.com/photo-1522083165195-342750297f05?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
     images: [
+      "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1522083165195-342750297f05?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
@@ -80,8 +81,9 @@ export const products: Product[] = [
     category: "Tablet Coating",
     capacity: "120 kg/batch",
     compliance: ["cGMP", "GMP", "FDA Certified"],
-    cover: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1200&q=80",
     images: [
+      "https://images.unsplash.com/photo-1585435557343-3b092031a831?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
@@ -126,8 +128,9 @@ export const products: Product[] = [
     category: "Filling & Packaging",
     capacity: "6,000 bottles/hour",
     compliance: ["cGMP", "GMP", "ISO 14644-1"],
-    cover: "https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=1200&q=80",
     images: [
+      "https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
@@ -148,9 +151,9 @@ export const products: Product[] = [
     category: "Capsule Filling",
     capacity: "80,000 capsules/hour",
     compliance: ["cGMP", "GMP"],
-    cover: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1200&q=80",
     images: [
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1584017911766-d451b3d0e843?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
       { label: "Maximum Speed", value: "80,000 capsules/hour" },
@@ -214,9 +217,9 @@ export const products: Product[] = [
     category: "Labeling",
     capacity: "12,000 vials/hour",
     compliance: ["cGMP", "GMP", "FDA Compliant"],
-    cover: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+    cover: "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1200&q=80",
     images: [
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+      "https://images.unsplash.com/photo-1579165466741-7f35e4755660?auto=format&fit=crop&w=1200&q=80"
     ],
     specs: [
       { label: "Labeling Speed", value: "Up to 12,000 vials/hour" },

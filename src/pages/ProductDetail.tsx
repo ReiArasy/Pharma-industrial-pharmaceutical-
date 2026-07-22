@@ -86,7 +86,7 @@ export default function ProductDetail() {
     ? related 
     : products.filter((p) => p.slug !== product.slug).slice(0, 3);
 
-  const seoTitle = `${product.name} | PT. Pharma-Industrial Manufaktur Nusantara`;
+  const seoTitle = `${product.name} | pharma-industrial`;
   const seoDescription = product.description || `High-performance ${product.name} pharmaceutical system. Certified cGMP and FDA compliant machinery engineered for absolute sterile integrity.`;
   const siteUrl = `${window.location.origin}/products/${product.slug}`;
   const seoImage = product.cover || fallbackImage;
@@ -104,7 +104,7 @@ export default function ProductDetail() {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={siteUrl} />
         <meta property="og:image" content={seoImage} />
-        <meta property="og:site_name" content="Pharma-Industrial" />
+        <meta property="og:site_name" content="Pharma" />
         
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -303,25 +303,35 @@ export default function ProductDetail() {
               <Link
                 key={rel.slug}
                 to={`/products/${rel.slug}`}
-                className="cursor-card-trigger group block border border-border overflow-hidden rounded-[2px] bg-bg-alt"
+                className="relative block w-full overflow-hidden border border-border/30 rounded-sm bg-neutral-900 group transition-all duration-500 ease-out hover:border-white/30 hover:shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
               >
-                <div className="aspect-[1.4] overflow-hidden bg-bg-dark relative">
+                <div className="w-full aspect-[4/3] overflow-hidden relative">
                   <img
                     src={rel.cover || fallbackImage}
                     alt={rel.name}
                     referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-102"
+                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-95 group-hover:scale-105 transition-all duration-700 ease-out"
                     onError={(e) => {
                       (e.target as HTMLImageElement).src = fallbackImage;
                     }}
                   />
-                </div>
-                <div className="p-4 bg-bg flex justify-between items-center border-t border-border">
-                  <div>
-                    <h4 className="font-space font-medium text-sm text-text group-hover:text-black transition-colors">{rel.name}</h4>
-                    <p className="text-xs text-text-muted mt-0.5">{rel.capacity}</p>
+
+                  {/* Subtle Bottom Gradient for Contrast & Balance */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+
+                  {/* Minimalist Overlay */}
+                  <div className="absolute inset-0 p-5 flex flex-col justify-end text-left z-10">
+                    <h4 className="font-space font-medium text-base text-white tracking-tight leading-snug">
+                      {rel.name}
+                    </h4>
+
+                    {/* View Detail on Hover */}
+                    <div className="overflow-hidden max-h-0 group-hover:max-h-8 transition-all duration-300 ease-out mt-0 group-hover:mt-1.5">
+                      <span className="font-mono text-[11px] font-medium uppercase tracking-widest text-accent flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                        View Detail &rarr;
+                      </span>
+                    </div>
                   </div>
-                  <span className="text-text group-hover:text-accent font-medium transition-colors">&rarr;</span>
                 </div>
               </Link>
             ))}
